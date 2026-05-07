@@ -1,32 +1,15 @@
-import { AlertTriangle, Check, Info } from "lucide-react";
-import { useState } from "react";
-import type { ScenarioCheck } from "../../types/analysisResult";
-
-interface AnalysisSummaryCardProps {
-  score: number;
-  status: "compliant" | "non-compliant";
-  scenarioChecks: ScenarioCheck[];
-}
-
-const LOW_CONFIDENCE_THRESHOLD = 70;
+import { AlertTriangle, Check } from "lucide-react";
+import AnalysisConfidenceCircle from "./AnalysisConfidenceCircle";
+import type { AnalysisSummaryCardProps } from "../../types/analysisResult";
 
 const AnalysisSummaryCard = ({
   score,
   status,
   scenarioChecks,
 }: AnalysisSummaryCardProps) => {
-  const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
-
   const isCompliant = status === "compliant";
-  const isLowConfidence = score < LOW_CONFIDENCE_THRESHOLD;
 
   const visibleScenarioChecks = scenarioChecks.filter((check) => check.present);
-
-  const circleColor = isLowConfidence ? "text-red-500" : "text-amber-500";
-
-  const radius = 37;
-  const circumference = 2 * Math.PI * radius;
-  const progressOffset = circumference - (score / 100) * circumference;
 
   return (
     <section className="rounded-md border border-[var(--color-border)] bg-[var(--color-white)] p-4 shadow-sm">
@@ -82,64 +65,7 @@ const AnalysisSummaryCard = ({
           )}
         </div>
 
-        <div className="relative flex flex-col items-center">
-          <div className="mb-1 flex items-center gap-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-primary)]/80">
-              Confidence
-            </p>
-
-            {isLowConfidence && (
-              <button
-                type="button"
-                onClick={() => setShowConfidenceInfo((current) => !current)}
-                className="rounded-full text-red-500 transition hover:opacity-80"
-                aria-label="Show confidence warning"
-              >
-                <Info size={15} strokeWidth={2.4} />
-              </button>
-            )}
-          </div>
-
-          <div className="relative h-24 w-24">
-            <svg className="h-full w-full -rotate-90" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r={radius}
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="8"
-                className="text-[var(--color-border)]/50"
-              />
-
-              <circle
-                cx="50"
-                cy="50"
-                r={radius}
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="8"
-                strokeLinecap="round"
-                strokeDasharray={circumference}
-                strokeDashoffset={progressOffset}
-                className={`${circleColor} transition-all`}
-              />
-            </svg>
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-xl font-bold text-[var(--color-dark)]">
-                {score}%
-              </span>
-            </div>
-          </div>
-
-          {showConfidenceInfo && (
-            <div className="absolute right-0 top-7 z-10 w-64 rounded-lg border border-red-200 bg-white p-3 text-sm leading-6 text-[var(--color-primary)] shadow-lg">
-              The results may not be sufficient enough because the model
-              confidence is low.
-            </div>
-          )}
-        </div>
+        <AnalysisConfidenceCircle score={score} />
       </div>
     </section>
   );
