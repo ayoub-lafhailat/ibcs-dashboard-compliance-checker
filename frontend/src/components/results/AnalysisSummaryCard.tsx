@@ -1,6 +1,6 @@
 import { AlertTriangle, Check } from "lucide-react";
-import AnalysisConfidenceCircle from "./AnalysisConfidenceCircle";
 import type { AnalysisSummaryCardProps } from "../../types/analysisResult";
+import AnalysisConfidenceCircle from "./AnalysisConfidenceCircle";
 
 const AnalysisSummaryCard = ({
   score,
@@ -8,6 +8,7 @@ const AnalysisSummaryCard = ({
   scenarioChecks,
 }: AnalysisSummaryCardProps) => {
   const isCompliant = status === "compliant";
+  const statusLabel = isCompliant ? "Compliant" : "Non-Compliant";
 
   const visibleScenarioChecks = scenarioChecks.filter((check) => check.present);
 
@@ -31,7 +32,7 @@ const AnalysisSummaryCard = ({
             )}
 
             <h2 className="text-3xl font-semibold leading-none text-[var(--color-dark)]">
-              {isCompliant ? "Compliant" : "Non-Compliant"}
+              {statusLabel}
             </h2>
           </div>
 
@@ -39,6 +40,9 @@ const AnalysisSummaryCard = ({
             <div className="mt-4 space-y-2">
               {visibleScenarioChecks.map((check) => {
                 const scenarioIsCompliant = check.status === "compliant";
+                const scenarioStatusLabel = scenarioIsCompliant
+                  ? "✓ Compliant"
+                  : "✗ Non-compliant";
 
                 return (
                   <div
@@ -56,7 +60,7 @@ const AnalysisSummaryCard = ({
                           : "text-red-500"
                       }`}
                     >
-                      {scenarioIsCompliant ? "✓ Compliant" : "✗ Non-compliant"}
+                      {scenarioStatusLabel}
                     </span>
                   </div>
                 );
