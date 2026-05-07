@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import AnalysisStatusCard from "../components/results/AnalysisStatusCard";
-import ComplianceScoreCard from "../components/results/ComplianceScoreCard";
+import AnalysisSummaryCard from "../components/results/AnalysisSummaryCard";
 import ExportReportButton from "../components/results/ExportReportButton";
 import ResultsHeader from "../components/results/ResultsHeader";
 import SuggestedImprovementsCard from "../components/results/SuggestedImprovementsCard";
@@ -48,14 +47,11 @@ const ResultsPage = () => {
           />
 
           <aside className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-4">
-              <ComplianceScoreCard score={analysisResult.score} />
-
-              <AnalysisStatusCard
-                status={analysisResult.status}
-                scenarioChecks={analysisResult.scenarioChecks}
-              />
-            </div>
+            <AnalysisSummaryCard
+              score={analysisResult.score}
+              status={analysisResult.status}
+              scenarioChecks={analysisResult.scenarioChecks}
+            />
 
             <SuggestedImprovementsCard
               suggestions={analysisResult.suggestions}
