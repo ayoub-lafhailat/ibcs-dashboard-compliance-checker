@@ -27,16 +27,16 @@ const AnalysisConfidenceCircle = ({ score }: AnalysisConfidenceCircleProps) => {
           Confidence
         </p>
 
-        {isLowConfidence && (
-          <button
-            type="button"
-            onClick={() => setShowConfidenceInfo((current) => !current)}
-            className="rounded-full text-red-500 transition hover:opacity-80"
-            aria-label="Show confidence warning"
-          >
-            <Info size={15} strokeWidth={2.4} />
-          </button>
-        )}
+        <button
+          type="button"
+          onClick={() => setShowConfidenceInfo((current) => !current)}
+          className={`rounded-full transition hover:opacity-80 ${
+            isLowConfidence ? "text-red-500" : "text-[var(--color-primary)]/70"
+          }`}
+          aria-label="Show confidence explanation"
+        >
+          <Info size={15} strokeWidth={2.4} />
+        </button>
       </div>
 
       <div className="relative h-24 w-24">
@@ -73,9 +73,18 @@ const AnalysisConfidenceCircle = ({ score }: AnalysisConfidenceCircleProps) => {
       </div>
 
       {showConfidenceInfo && (
-        <div className="absolute right-0 top-7 z-10 w-64 rounded-lg border border-red-200 bg-white p-3 text-sm leading-6 text-[var(--color-primary)] shadow-lg">
-          The results may not be reliable enough because the model confidence is
-          low.
+        <div className="absolute right-0 top-7 z-10 w-72 rounded-lg border border-[var(--color-border)] bg-white p-3 text-sm leading-6 text-[var(--color-primary)] shadow-lg">
+          <p>
+            Confidence shows how certain the AI model is about the analysis
+            result.
+          </p>
+
+          {isLowConfidence && (
+            <p className="mt-2 font-medium text-red-500">
+              This score is low, so the result may be less reliable and should
+              be reviewed carefully.
+            </p>
+          )}
         </div>
       )}
     </div>
