@@ -38,7 +38,7 @@ const ResultsPage = () => {
   const { analysisResult } = navigationState;
 
   return (
-    <section className="min-h-screen bg-[var(--color-background)] px-5 py-5">
+    <section className="min-h-screen bg-[var(--color-background)] px-5 py-4">
       <div className="mx-auto flex max-w-7xl flex-col gap-4">
         <ResultsHeader />
 
