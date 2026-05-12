@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -111,21 +111,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -151,21 +151,21 @@ type FeatureCardProps = {
   icon: "upload" | "shield" | "check";
 };
 &nbsp;
-const FeatureCard = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> title, description, icon }: FeatureCardProps) =&gt; {</span>
-  const renderIcon = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    switch (icon) {</span>
+const FeatureCard = ({ title, description, icon }: FeatureCardProps) =&gt; {
+  const renderIcon = () =&gt; {
+    switch (icon) {
       case "upload":
-<span class="cstat-no" title="statement not covered" >        return &lt;Upload size={24} strokeWidth={2} /&gt;;</span>
+        return &lt;Upload size={24} strokeWidth={2} /&gt;;
       case "shield":
-<span class="cstat-no" title="statement not covered" >        return &lt;ShieldCheck size={24} strokeWidth={2} /&gt;;</span>
+        return &lt;ShieldCheck size={24} strokeWidth={2} /&gt;;
       case "check":
-<span class="cstat-no" title="statement not covered" >        return &lt;CheckCircle size={24} strokeWidth={2} /&gt;;</span>
-      default:
+        return &lt;CheckCircle size={24} strokeWidth={2} /&gt;;
+<span class="branch-3 cbranch-no" title="branch not covered" >      default:</span>
 <span class="cstat-no" title="statement not covered" >        return null;</span>
     }
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;article className="flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-white)] p-7 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md"&gt;
       &lt;div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-background)] text-[var(--color-primary)]"&gt;
         {renderIcon()}
@@ -190,7 +190,7 @@ export default FeatureCard;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-12T10:21:35.187Z
+                at 2026-05-12T10:45:38.069Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

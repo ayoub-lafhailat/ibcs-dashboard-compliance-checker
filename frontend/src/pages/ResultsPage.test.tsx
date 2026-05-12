@@ -74,4 +74,46 @@ describe("ResultsPage", () => {
       "blob:mock-preview-url",
     );
   });
+
+  it("renders a non-compliant analysis result", () => {
+    const state: ResultsNavigationState = {
+      uploadedImageUrl: "blob:mock-preview-url",
+      analysisResult: {
+        uploadedImageUrl: "blob:mock-preview-url",
+        score: 72,
+        status: "non-compliant",
+        scenarioChecks: [],
+        issues: [
+          {
+            message: "The dashboard does not use consistent scenario notation.",
+            severity: "high",
+          },
+        ],
+        suggestions: [
+          "Use consistent notation for Actual, Previous, Forecast, and Plan values.",
+        ],
+      },
+    };
+
+    renderResultsPage(state);
+
+    expect(
+      screen.getByText((content) => content.replace(/\s/g, "") === "72%"),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("heading", { name: /^non-compliant$/i }),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(
+        /use consistent notation for actual, previous, forecast, and plan values/i,
+      ),
+    ).toBeInTheDocument();
+
+    expect(screen.getByAltText(/uploaded dashboard/i)).toHaveAttribute(
+      "src",
+      "blob:mock-preview-url",
+    );
+  });
 });

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -122,12 +122,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,7 +142,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,7 +157,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,10 +177,10 @@
 import jugoLogo from "../../assets/jugo.svg";
 &nbsp;
 const navLinkBase =
-<span class="cstat-no" title="statement not covered" >  "rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200";</span>
+  "rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200";
 &nbsp;
-const Navbar = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+const Navbar = () =&gt; {
+  return (
     &lt;header className="w-full border-b border-[var(--color-border)] bg-[var(--color-white)]"&gt;
       &lt;div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"&gt;
         &lt;div className="flex items-center gap-3"&gt;
@@ -198,11 +198,11 @@ const Navbar = <span class="cstat-no" title="statement not covered" ><span class
         &lt;nav className="flex items-center gap-2"&gt;
           &lt;NavLink
             to="/"
-            className={<span class="fstat-no" title="function not covered" >({</span> isActive }) =&gt;
-<span class="cstat-no" title="statement not covered" >              `${navLinkBase} ${</span>
+            className={({ isActive }) =&gt;
+              `${navLinkBase} ${
                 isActive
                   ? "bg-[var(--color-background)] text-[var(--color-primary)]"
-                  : "text-[var(--color-dark)] hover:bg-[var(--color-background)] hover:text-[var(--color-primary)]"
+                  : <span class="branch-1 cbranch-no" title="branch not covered" >"text-[var(--color-dark)] hover:bg-[var(--color-background)] hover:text-[var(--color-primary)]"</span>
               }`
             }
           &gt;
@@ -211,10 +211,10 @@ const Navbar = <span class="cstat-no" title="statement not covered" ><span class
 &nbsp;
           &lt;NavLink
             to="/analyze"
-            className={<span class="fstat-no" title="function not covered" >({</span> isActive }) =&gt;
-<span class="cstat-no" title="statement not covered" >              `${navLinkBase} ${</span>
+            className={({ isActive }) =&gt;
+              `${navLinkBase} ${
                 isActive
-                  ? "bg-[var(--color-background)] text-[var(--color-primary)]"
+                  ? <span class="branch-0 cbranch-no" title="branch not covered" >"bg-[var(--color-background)] text-[var(--color-primary)]"</span>
                   : "text-[var(--color-dark)] hover:bg-[var(--color-background)] hover:text-[var(--color-primary)]"
               }`
             }
@@ -235,7 +235,7 @@ export default Navbar;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-12T10:21:35.187Z
+                at 2026-05-12T10:45:38.069Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
