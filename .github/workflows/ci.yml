@@ -10,7 +10,7 @@ on:
   push:
     branches:
       - dev
-      - feature/ci-cd-pipeline
+      - "feature/**"
 
 jobs:
   frontend-build:
@@ -35,8 +35,14 @@ jobs:
       - name: Install frontend dependencies
         run: npm ci
 
+      - name: Audit frontend dependencies
+        run: npm audit --audit-level=high
+
       - name: Lint frontend
         run: npm run lint
+
+      - name: Test frontend
+        run: npm run test:run
 
       - name: Build frontend
         run: npm run build
