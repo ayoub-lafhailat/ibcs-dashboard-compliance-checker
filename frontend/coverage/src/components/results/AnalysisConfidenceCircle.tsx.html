@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">73.68% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>14/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>3/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">77.77% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>14/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -197,41 +197,41 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -321,23 +321,23 @@ import {
   isLowConfidenceScore,
 } from "../../utils/analysisSummaryUtils";
 &nbsp;
-const CIRCLE_RADIUS = <span class="cstat-no" title="statement not covered" >37;</span>
+const CIRCLE_RADIUS = 37;
 &nbsp;
-const AnalysisConfidenceCircle = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> score }: AnalysisConfidenceCircleProps) =&gt; {</span>
-  const [showConfidenceInfo, setShowConfidenceInfo<span class="cstat-no" title="statement not covered" >] = useState(false);</span>
-  const <span class="cstat-no" title="statement not covered" >confidenceInfoRef = useRef&lt;HTMLDivElement | null&gt;(null);</span>
+const AnalysisConfidenceCircle = ({ score }: AnalysisConfidenceCircleProps) =&gt; {
+  const [showConfidenceInfo, setShowConfidenceInfo] = useState(false);
+  const confidenceInfoRef = useRef&lt;HTMLDivElement | null&gt;(null);
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" >safeScore = clampScore(score);</span>
-  const <span class="cstat-no" title="statement not covered" >isLowConfidence = isLowConfidenceScore(safeScore);</span>
-  const <span class="cstat-no" title="statement not covered" >circleColor = getConfidenceCircleColor(safeScore);</span>
+  const safeScore = clampScore(score);
+  const isLowConfidence = isLowConfidenceScore(safeScore);
+  const circleColor = getConfidenceCircleColor(safeScore);
 &nbsp;
-  const { circumference, progressOffset <span class="cstat-no" title="statement not covered" >} = calculateCircleProgress(</span>
+  const { circumference, progressOffset } = calculateCircleProgress(
     safeScore,
     CIRCLE_RADIUS,
   );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
-    const handleClickOutside = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>vent: MouseEvent) =&gt; {</span>
+  useEffect(() =&gt; {
+    const handleClickOutside = <span class="fstat-no" title="function not covered" >(e</span>vent: MouseEvent) =&gt; {
 <span class="cstat-no" title="statement not covered" >      if (</span>
         confidenceInfoRef.current &amp;&amp;
         !confidenceInfoRef.current.contains(event.target as Node)
@@ -346,16 +346,16 @@ const AnalysisConfidenceCircle = <span class="cstat-no" title="statement not cov
       }
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (showConfidenceInfo) {</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (showConfidenceInfo) {
 <span class="cstat-no" title="statement not covered" >      document.addEventListener("mousedown", handleClickOutside);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >      document.removeEventListener("mousedown", handleClickOutside);</span>
+    return () =&gt; {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showConfidenceInfo]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="relative flex flex-col items-center"&gt;
       &lt;div className="mb-1 flex items-center gap-2"&gt;
         &lt;p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-primary)]/80"&gt;
@@ -368,7 +368,7 @@ const AnalysisConfidenceCircle = <span class="cstat-no" title="statement not cov
             onClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etShowConfidenceInfo(<span class="fstat-no" title="function not covered" >(c</span>urrent) =&gt; <span class="cstat-no" title="statement not covered" >!current)</span>}</span>
             className={`cursor-pointer rounded-full transition hover:opacity-80 ${
               isLowConfidence
-                ? "text-red-500"
+                ? <span class="branch-0 cbranch-no" title="branch not covered" >"text-red-500"</span>
                 : "text-[var(--color-primary)]/70"
             }`}
             aria-label="Show confidence explanation"
@@ -377,7 +377,7 @@ const AnalysisConfidenceCircle = <span class="cstat-no" title="statement not cov
           &lt;/button&gt;
 &nbsp;
           {showConfidenceInfo &amp;&amp; (
-            &lt;div className="absolute right-0 top-7 z-10 w-72 rounded-lg border border-[var(--color-border)] bg-white p-3 text-sm leading-6 text-[var(--color-primary)] shadow-lg"&gt;
+<span class="branch-1 cbranch-no" title="branch not covered" >            &lt;div className="absolute right-0 top-7 z-10 w-72 rounded-lg border border-[var(--color-border)] bg-white p-3 text-sm leading-6 text-[var(--color-primary)] shadow-lg"&gt;</span>
               &lt;p&gt;
                 Confidence shows how certain the AI model is about the analysis
                 result.
@@ -442,7 +442,7 @@ export default AnalysisConfidenceCircle;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-12T10:18:11.486Z
+                at 2026-05-12T10:21:35.187Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

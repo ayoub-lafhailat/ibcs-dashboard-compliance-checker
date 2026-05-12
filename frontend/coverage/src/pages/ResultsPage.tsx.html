@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -139,14 +139,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,9 +165,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,12 +207,12 @@ import SuggestedImprovementsCard from "../components/results/SuggestedImprovemen
 import UploadedDashboardCard from "../components/results/UploadedDashboardCard";
 import type { ResultsNavigationState } from "../types/analysisResult";
 &nbsp;
-const ResultsPage = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
-  const <span class="cstat-no" title="statement not covered" >location = useLocation();</span>
-  const navigationState = <span class="cstat-no" title="statement not covered" >location.state as ResultsNavigationState | null;</span>
+const ResultsPage = () =&gt; {
+  const location = useLocation();
+  const navigationState = location.state as ResultsNavigationState | null;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!navigationState) {</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+  if (!navigationState) {
+    return (
       &lt;section className="flex min-h-screen items-center justify-center bg-[var(--color-background)] px-6 py-12"&gt;
         &lt;div className="w-full max-w-3xl rounded-3xl border border-[var(--color-border)] bg-[var(--color-white)] p-10 text-center shadow-sm"&gt;
           &lt;h1 className="text-3xl font-bold text-[var(--color-dark)] md:text-4xl"&gt;
@@ -235,9 +235,9 @@ const ResultsPage = <span class="cstat-no" title="statement not covered" ><span 
     );
   }
 &nbsp;
-  const { analysisResult } = <span class="cstat-no" title="statement not covered" >navigationState;</span>
+  const { analysisResult } = navigationState;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;section className="min-h-screen bg-[var(--color-background)] px-5 py-4"&gt;
       &lt;div className="mx-auto flex max-w-7xl flex-col gap-4"&gt;
         &lt;ResultsHeader /&gt;
@@ -274,7 +274,7 @@ export default ResultsPage;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-12T10:18:11.486Z
+                at 2026-05-12T10:21:35.187Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
