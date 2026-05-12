@@ -10,7 +10,7 @@ on:
   push:
     branches:
       - dev
-      - feature/ci-cd-pipeline
+      - "feature/**"
 
 jobs:
   frontend-build:
