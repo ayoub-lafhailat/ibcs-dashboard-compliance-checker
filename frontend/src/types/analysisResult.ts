@@ -4,6 +4,15 @@ export interface ScenarioCheck {
   status: "compliant" | "non-compliant";
 }
 
+export interface AnalysisConfidenceCircleProps {
+  score: number;
+}
+export interface AnalysisSummaryCardProps {
+  score: number;
+  status: "compliant" | "non-compliant";
+  scenarioChecks: ScenarioCheck[];
+}
+
 export interface AnalysisIssue {
   message: string;
   severity: "high" | "medium";
