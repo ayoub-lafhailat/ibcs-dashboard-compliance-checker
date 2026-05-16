@@ -156,6 +156,22 @@ My contribution focused heavily on both the technical AI implementation and the 
 * Participated in requirement discussions and feasibility analysis
 * Helped translate business requirements into technical solutions
 
+# Model Experiments
+
+During development, multiple model architectures and implementation approaches were explored and tested.
+
+Several experimental CNN implementations are included in this repository as part of the research and experimentation process.
+
+One of the primary models was implemented manually without AI-assisted code generation in order to better understand and control the underlying architecture, preprocessing pipeline, and training workflow.
+
+This model is recommended as the clearest reference implementation for understanding the project's machine learning pipeline and experimentation process.
+
+## Recommended Reference Model
+
+- [Reference CNN Model](model/JugoModelSimple.ipynb)
+
+Other experimental approaches and iterations are also included in the repository for comparison and research purposes.
+
 ---
 
 ## Challenges
@@ -183,6 +199,8 @@ Possible future improvements include:
 * Real-time dashboard analysis
 * Integration into BI tools such as Power BI or Tableau
 * Hybrid rule-based + AI detection systems
+
+  
 
 ---
 
