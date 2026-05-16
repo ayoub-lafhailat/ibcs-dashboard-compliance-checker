@@ -39,7 +39,14 @@ The proof-of-concept focuses specifically on:
 * Research into explainability and rule-based feedback
 
 ---
+## Examples
+### IBCS Compliant Dashboard
+<img width="1600" height="900" alt="IBCS Demo Compliant" src="https://github.com/user-attachments/assets/ceded3c4-fc24-48ac-af4f-b5996f0456da" />
 
+### IBCS Non-Compliant Dashboard
+<img width="1600" height="900" alt="IBCS Demo Non Compliant" src="https://github.com/user-attachments/assets/8032f195-8faa-44a7-a1b6-20c51927f473" />
+
+---
 ## Technologies Used
 
 ### Programming Languages
